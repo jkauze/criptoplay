@@ -4,13 +4,15 @@ class CpController < ApplicationController
 	def jugar
 		@respuesta = false;
 		if request.post?
-      		@usuario = {
+      		@info = {
       			:monto => params[:monto],
          		:moneda => params[:moneda]
          		};
-  		end
-		#usuario = User.current_user
-		#usuario.update(params[:monto])
+  		
+		  		moneda = Coin.find_by(nombre: params[:moneda])
+		  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => :monto)
+		  		@bet.save
+		end
 	end
 
 	#Pagina principal para recargar y ver saldo

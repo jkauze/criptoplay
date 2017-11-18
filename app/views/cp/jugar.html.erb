@@ -1,11 +1,11 @@
 <h1>pagina de jugar</h1>
-<%= @usuario %>
+<%= Bet.all %>
 
 <h2> Apuesta </h2>
 <%= form_tag({:controller => "cp", :action => "jugar"}, :method => "post") do %>
    <%= label_tag "monto", "Monto" %>
    <br />
-   <%= number_field_tag  "monto", "", :required => "required", min: 0%>
+   <%= number_field_tag  "monto", "", :required => "required", min: 0.0000000001, step: :any %>
    <br />
    <%= label_tag "moneda", "Moneda" %>
    <br />
