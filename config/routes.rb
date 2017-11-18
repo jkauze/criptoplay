@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :coins
+  #get '/coins', to: 'coins#index'
+  #get '/coins/new', to: 'coins#new'
+  #get '/coins', to: 'coins#new'
   get 'welcome/index'
   get 'welcome/conocenos'
   get 'welcome/aprende'
