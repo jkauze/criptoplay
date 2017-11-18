@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/conocenos'
   get 'welcome/aprende'
   get 'cp/jugar'
+  post "cp/jugar"
   get 'cp/perfil'
   get 'cp/saldo'
   get 'cp/resultados'

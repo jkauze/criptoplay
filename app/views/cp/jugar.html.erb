@@ -1,1 +1,21 @@
 <h1>pagina de jugar</h1>
+<%= @usuario %>
+
+<h2> Apuesta </h2>
+<%= form_tag({:controller => "cp", :action => "jugar"}, :method => "post") do %>
+   <%= label_tag "monto", "Monto" %>
+   <br />
+   <%= number_field_tag  "monto", "", :required => "required", min: 0%>
+   <br />
+   <%= label_tag "moneda", "Moneda" %>
+   <br />
+   <%= text_field_tag "moneda", "", :required => "required"%>
+   <br />
+   <%= submit_tag "Apostar" %>
+<% end %>
+<% if @moneda %>
+   <p> <strong><%= @moneda[:monto] %></strong>, Gracias por publicar tu apuesta </p>
+   <div class="Moneda">
+      <%= simple_format (@moneda[:moneda]) %>
+   </div>
+<% end %>
