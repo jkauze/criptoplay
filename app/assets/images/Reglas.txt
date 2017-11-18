@@ -1,0 +1,9 @@
+Reglas del Juego
+
+1. CriptoPlay ?es un juego de ENVITE Y AZAR,? que consiste en la extracción aleatoria de UNA (1) CRIPTOMONEDA que resultará ganador en cada uno de los sorteos establecidos. Permitiendo escoger entre 36 criptomonedas y pagándose 29 veces el monto de la apuesta .
+2. La(s) apuesta(s) de los jugadores se harán a través de la sección Jugar.
+3. La jugada mínima y máxima no tiene restricción.
+4. El jugador debe ser mayor de edad.
+5. Las jugadas se realizarán hasta 5 minutos antes de cada sorteo. Jugadas realizadas por encima de ese horario se considerará como jugadas no válidas retornando de forma automática el monto de la jugada.
+6. El jugador ganador se le abonará el premio en la cartera asignada.
+7. El pago de los premios es responsabilidad exclusiva del administrador de CriptoPlay.
