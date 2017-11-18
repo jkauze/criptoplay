@@ -10,33 +10,28 @@
 				</li>
 
 				<li class="col-md">
-					Como Jugar
+					<%= link_to "Como Jugar",  welcome_aprende_path %>
+				</li>
+
 				</li><%if user_signed_in? %>
-    <li>
+    <li class="col-md">
     <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, class: "itemMenu" %>
     </li>
 
-    <li>
+    <li class="col-md">
     <%= current_user.email%>
     </li>
 
     <%else%>
-    <li>
+    <li class="col-md">
       <%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%>
     </li>
 
-    <li>
+    <li class="col-md">
       <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
     </li>
 <%end%>
-					<%= link_to "Como Jugar",  welcome_aprende_path %>
-				</li>
-				  <li class="col-md">
-				 	Iniciar Sesion
-				  </li>
-				  <li class="col-md">
-				 	Crear Usuario
-				  </li>
+					
 				  <!-- Opciones para inicio de sesion
 				  <li class="col-md">
 				 	Cerrar Sesion
