@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/conocenos'
   get 'welcome/aprende'
+  get 'cp/jugar'
+  get 'cp/perfil'
+  get 'cp/saldo'
+  get 'cp/resultados'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

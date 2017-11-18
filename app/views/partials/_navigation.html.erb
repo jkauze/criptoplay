@@ -13,35 +13,41 @@
 					<%= link_to "Como Jugar",  welcome_aprende_path %>
 				</li>
 
-				</li><%if user_signed_in? %>
-    <li class="col-md">
-    <%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete, class: "itemMenu" %>
-    </li>
-
-    <li class="col-md">
-    <%= current_user.email%>
-    </li>
-
-    <%else%>
-    <li class="col-md">
-      <%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%>
-    </li>
-
-    <li class="col-md">
-      <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
-    </li>
-<%end%>
-					
-				  <!-- Opciones para inicio de sesion
-				  <li class="col-md">
-				 	Cerrar Sesion
-				 </li> 
-				 <li class="col-md">
-				 	Iniciar Sesion
-				  </li>
 				<li class="col-md">
-				 	Perfil
-				  </li>-->
-			</ul>
-		</nav>
-	</header>
+			    <%= link_to "Resultado", cp_resultados_path %>
+			    </li>
+
+
+				</li> <%if user_signed_in? %>
+
+			    <li class="col-md"> 
+			    	<%= link_to "Jugar",  cp_jugar_path %>
+			    </li>
+
+			    <li class="col-md">
+			    	Saldo 00 
+			    </li>
+
+			    <li class="col-md">
+			    	<ul style="list-style-type:none">
+				        <li><a href="#nowhere" >Perfil</a>
+				            <ul id="list">
+				                <li><%= link_to "Terminar",  destroy_user_session_path, method: :delete, class: "itemMenu" %> </li>
+				                <li class="col-md"><%= link_to "Saldo",  cp_saldo_path %></li>
+				            </ul>
+				        </li>
+				    </ul>
+			    </li>
+
+			    <%else%>
+			    <li class="col-md">
+			      <%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%>
+			    </li>
+
+			    <li class="col-md">
+			      <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
+			    </li>
+			<%end%>
+		</ul>
+	</nav>
+</header>
