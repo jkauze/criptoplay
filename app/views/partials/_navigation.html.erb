@@ -1,15 +1,16 @@
 <header>
 		<nav class="be-red white large-padding">
-			<ul class=" no-list row center-xs middle-xs">
+			<ul class=" no-list row center-xs middle-xs" style="list-style-type:none">
 				<li class="col-md">
 					<h2 class="no-margin" id="logo"> <%= link_to "CriptoPlay", root_path %> </h2>
 				 </li>
 
 				<li class="col-md">
-					Conocenos
+					<%= link_to "Conocenos",  welcome_conocenos_path  %>
 				</li>
 
 				<li class="col-md">
+<<<<<<< HEAD
 					Como Jugar
 				</li><%if user_signed_in? %>
     <li>
@@ -29,6 +30,16 @@
       <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
     </li>
 <%end%>
+=======
+					<%= link_to "Como Jugar",  welcome_aprende_path %>
+				</li>
+				  <li class="col-md">
+				 	Iniciar Sesion
+				  </li>
+				  <li class="col-md">
+				 	Crear Usuario
+				  </li>
+>>>>>>> ddff76bb7989498d6403eacf57a65dac6851eb6d
 				  <!-- Opciones para inicio de sesion
 				  <li class="col-md">
 				 	Cerrar Sesion
