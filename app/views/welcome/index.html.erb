@@ -1,2 +1,7 @@
 <h1>CriptoPlay</h1>
 		<h2> Bienvenido, inicia sesion para poder interactuar con nosotros</h2>
+
+		<%if user_signed_in? %>
+		<p>Hola </p>
+		<p><%=current_user.monto%></p>
+		<%end%>
