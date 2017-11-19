@@ -2,6 +2,7 @@ class CpController < ApplicationController
 
 	#Pagina principal para apostar
 	def jugar
+		hora
 		@respuesta = nil;
 		if request.post?
 			@respuesta = false;
@@ -21,6 +22,7 @@ class CpController < ApplicationController
 
 	#Pagina principal para recargar y ver saldo
 	def saldo
+		hora
 		if request.post?
 
 			@saldo1 ={
@@ -37,10 +39,12 @@ class CpController < ApplicationController
 
 	#Pagina para modificar y ver perfil
 	def perfil
+		hora
 	end
 
 	#Pagina con los resultados del dia
 	def resultados
+		hora
 		@arreglo_de_resultados = Result.all
 		@contador=0
 	end
