@@ -1,17 +1,19 @@
 desc "Premio de los ganadores"
 task :reseteo => :environment do
-	#puts Coin.all
 	offset = rand(Coin.count)
 	# Seleciona la moneda ganadora
 	ganadora = Coin.offset(offset).first.id
 	puts ganadora
+	#resultado = Result.new(:coin => Coin.offset(offset).first, :fecha => Time.now.strftime("%R"))
+	#resultado.save
 	# Ganadora es la moneda ganadora
 	lista = Bet.where(coin_id: ganadora).load
-	#puts lista
 	for i in(lista)
-    	puts i
-    	puts "hola"
+    	premio = i.cantidad * 25
+    	i.user.update(:saldo => premio + i.user.saldo)
 	end
+	Bet.delete_all
+    puts "Borrado la tabla"
 end
 
 
