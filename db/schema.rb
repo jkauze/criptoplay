@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(version: 20171119152739) do
 
   create_table "coins", force: :cascade do |t|
     t.string   "nombre"
+    t.integer  "bet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "coins", ["bet_id"], name: "index_coins_on_bet_id"
 
   create_table "results", force: :cascade do |t|
     t.integer  "coin_id"
