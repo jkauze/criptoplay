@@ -2,6 +2,7 @@ class CpController < ApplicationController
 
 	#Pagina principal para apostar
 	def jugar
+		hora
 		@respuesta = false;
 		if request.post?
       		@info = {
@@ -11,10 +12,8 @@ class CpController < ApplicationController
   		
 		  		moneda = Coin.find_by(nombre: params[:moneda])
 		  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => :monto)
-		  		@bet.save
 		end
 	end
-
 	#Pagina principal para recargar y ver saldo
 	def saldo
 	end
