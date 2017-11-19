@@ -1,1 +1,20 @@
-<h1>Pagina de Saldo y recarga de saldo</h1>
+<h1>pagina de Recargar Saldo</h1>
+
+
+<h2> Saldo </h2>
+   <br />
+
+   <%= form_tag({:controller => "cp", :action => "saldo"}, :method => "post") do %>
+   <%= label_tag "saldo", "Saldo" %>
+
+   <%= number_field_tag  "saldo_a_enviar", "", :required => "required", min: 0.0000000001, step: :any %>
+  
+
+   
+   <%= submit_tag "Recargar" %>
+<% end %>
+	<p>Tu saldo actual es de: <%=current_user.saldo%> </p>
+<% if @saldo1 %>
+   <p> <strong><%= @saldo1[:saldo] %></strong> fue lo que recargaste</p>
+   
+<% end %>

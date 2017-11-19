@@ -21,7 +21,7 @@
 				</li> <%if user_signed_in? %>
 
 			    <li class="col-md"> 
-			    	<%= link_to "Jugar",  cp_jugar_path %>
+			    	<%= link_to "Jugar",cp_jugar_path, :method => 'get' %>
 			    </li>
 
 			    <li class="col-md">

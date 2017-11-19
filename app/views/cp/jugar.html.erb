@@ -1,5 +1,5 @@
 <h1>pagina de jugar</h1>
-<%= Bet.all %>
+
 
 <h2> Apuesta </h2>
 <%= form_tag({:controller => "cp", :action => "jugar"}, :method => "post") do %>
@@ -13,11 +13,12 @@
    <br />
    <%= submit_tag "Apostar" %>
 <% end %>
-<% if @moneda %>
-   <p> <strong><%= @moneda[:monto] %></strong>, Gracias por publicar tu apuesta </p>
-   <div class="Moneda">
-      <%= simple_format (@moneda[:moneda]) %>
-   </div>
-<% end %>
 
-<%=@foo%>
+<% if request.post?%>
+   <% if @respuesta %>
+      <p> Gracias por publicar tu apuesta </p>
+
+   <% else%>
+      <p>Tienes menos saldo de lo que quieres apostar!</p> 
+   <% end %>
+<%end%>
