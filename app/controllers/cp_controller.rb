@@ -2,17 +2,21 @@ class CpController < ApplicationController
 
 	#Pagina principal para apostar
 	def jugar
-		@respuesta = false;
+		@respuesta = nil;
 		if request.post?
+			@respuesta = false;
       		@info = {
-      			:monto => params[:monto],
+      			:monto => params[:monto].to_f,
          		:moneda => params[:moneda]
          		};
   				
-  				current_user.update(:saldo => current_user.saldo - @info[:monto].to_f)
-		  		moneda = Coin.find_by(nombre: params[:moneda])
-		  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => @info[:monto])
-		  		@bet.save
+  				if current_user.saldo >= @info[:monto]	
+	  				@respuesta = true
+	  				current_user.update(:saldo => current_user.saldo - @info[:monto])
+			  		moneda = Coin.find_by(nombre: params[:moneda])
+			  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => @info[:monto])
+			  		@bet.save
+			  	end
 		end
 	end
 

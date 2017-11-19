@@ -15,6 +15,6 @@
 <% end %>
 	<p>Tu saldo actual es de: <%=current_user.saldo%> </p>
 <% if @saldo1 %>
-   <p> <strong><%= @saldo1 %></strong> fue lo que recargaste</p>
+   <p> <strong><%= @saldo1[:saldo] %></strong> fue lo que recargaste</p>
    
 <% end %>
