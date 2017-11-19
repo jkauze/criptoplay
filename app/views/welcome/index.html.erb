@@ -1,8 +1,77 @@
-<h1>CriptoPlay</h1>
-		<h3>Hora Actual: <%= @foo %> </h3>
-		<h2> Bienvenido, inicia sesion para poder interactuar con nosotros</h2>
 
-		<%if user_signed_in? %>
-		<p>Hola </p>
-		<p><%=current_user.monto%></p>
-		<%end%>
+    <div id="templatemo_fw">
+        <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active">
+              	<%= image_tag "imagenportada.jpg", :alt => "First Slide"%>
+                <div class="carousel-caption">
+                  <div class="textoSlider">
+                    <h3>Juega con Nosotros</h3>
+                  <p>Apuesta diariamente a una de las 36 CriptoMonedas e intenta ganar</p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="item">
+              	<%= image_tag "venezuela-y-el-mundo.jpg", :alt => "Second Slide"%>
+                <div class="carousel-caption">
+                <div class="textoSlider">
+                  <h3>Por ahora solo Venezuela</h3>
+                  <p>Aprovecha la oportunidad de ganar dinero en nuestro sistema</p>
+                </div>
+                </div>
+              </div>
+              <div class="item">
+              	<%= image_tag "bitcoin-criptomonedas.jpg", :alt => "Third Slide"%>
+                <div class="carousel-caption">
+                <div class="textoSlider">
+                  <h3>Sistema basado en las criptomonedas</h3>
+                  <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+	</div>
+    
+    <div id="templatemo_main">
+    	<div class="col_fw">
+        	<div class="col_w460 float_l">
+            	<h2 class="titulo">Reglas del Juego</h2>
+                <div class="cleaner h20"></div>
+                <ul class="tmo_list margen">
+                  <li>CriptoPlay es un juego de ENVITE Y AZAR, que consiste en la extracción aleatoria de UNA (1) CRIPTOMONEDA que resultará ganadora en cada uno de los sorteos establecidos. Permitiendo escoger entre 36 criptomonedas y pagándose 29 veces el monto de la apuesta.</li>
+                  <li>La(s) apuesta(s) de los jugadores se harán a través de la sección Jugar.</li>
+                  <li>La jugada mínima y máxima no tiene restricción.</li>
+                  <li>El jugador debe ser mayor de edad.</li>
+                  <li>Las jugadas se realizarán hasta 5 minutos antes de cada sorteo. Jugadas realizadas por encima de ese horario se considerará como jugadas no válidas retornando de forma automática el monto de la jugada.</li>
+                  <li>El jugador ganador se le abonará el premio en la cartera asignada.</li>
+                  <li>El pago de los premios es responsabilidad exclusiva del administrador de CriptoPlay.</li>
+                </ul>
+                <div class="cleaner h20"></div>
+                <a href="#" class="more float_r"></a>
+            </div>
+            <div class="col_w460 float_r">
+            	<h2 class="titulo">Monedas</h2>
+            	<%= image_tag "monedasindex.png", :alt => "image 02" ,:class =>"imagenesmonedas" %>
+
+            </div>
+            <div class="cleaner"></div>
+		</div>
+    </div>
+    
+    <div class="cleaner"></div>
+
+<div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+        Copyright © 2017 <a href="#">KDMJ Team</a>
+        <div class="cleaner"></div>
+    </div>
+</div> 

@@ -1,0 +1,33 @@
+.textoSlider{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+.imagenesmonedas{
+	width: 450px;
+	margin-top: 80px;
+}
+
+.margen{
+	margin-top: 60px;
+}
+
+.titulo{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.tituloprincipal{
+	text-align: center;
+}
+
+.espacioEquipo{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.tamanoMiembro{
+	width: 100px;
+}

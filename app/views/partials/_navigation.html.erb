@@ -1,6 +1,9 @@
 <header>
-		<nav class="be-red white large-padding">
+		<nav class="tableroMonedas white large-padding">
 			<ul class=" no-list row center-xs middle-xs" style="list-style-type:none">
+				<li class="col-md">
+					<%= @foo %>
+				</li>
 				<li class="col-md">
 					<h2 class="no-margin" id="logo"> <%= link_to "CriptoPlay", root_path %> </h2>
 				 </li>
@@ -9,9 +12,7 @@
 					<%= link_to "Conocenos",  welcome_conocenos_path  %>
 				</li>
 
-				<li class="col-md">
-					<%= link_to "Como Jugar",  welcome_aprende_path %>
-				</li>
+				
 
 				<li class="col-md">
 			    <%= link_to "Resultado", cp_resultados_path %>
