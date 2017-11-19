@@ -3,13 +3,55 @@
 
 <h2> Apuesta </h2>
 <%= form_tag({:controller => "cp", :action => "jugar"}, :method => "post") do %>
+
+   <div class="tableroMonedas">
+      
+      <%= image_tag "aeternity.png", :class => "imagenCrypto", :alt => "aeternity"%>
+      <%= image_tag "ardor.png", :class => "imagenCrypto", :alt => "ardor"%>
+      <%= image_tag "ark.png", :class => "imagenCrypto", :alt => "ark"%>
+      <%= image_tag "binancecoin.png", :class => "imagenCrypto", :alt => "binancecoin"%>
+      <%= image_tag "bitconnect.png", :class => "imagenCrypto", :alt => "bitconnect"%>
+      <%= image_tag "bitcoin.png", :class => "imagenCrypto", :alt => "bitcoin"%>
+      <%= image_tag "bitshares.png", :class => "imagenCrypto", :alt => "bitshares"%>
+      <%= image_tag "bytecoin.png", :class => "imagenCrypto", :alt => "bytecoin"%>
+      <%= image_tag "bytom.png", :class => "imagenCrypto", :alt => "bytom"%>
+      <%= image_tag "cardano.png", :class => "imagenCrypto", :alt => "cardano"%>
+      <%= image_tag "dash.png", :class => "imagenCrypto", :alt => "dash"%>
+      <%= image_tag "decred.png", :class => "imagenCrypto", :alt => "decred"%>
+      <%= image_tag "eos.png", :class => "imagenCrypto", :alt => "eos"%>
+      <%= image_tag "ethereum.png", :class => "imagenCrypto", :alt => "ethereum"%>
+      <%= image_tag "factom.png", :class => "imagenCrypto", :alt => "factom"%>
+      <%= image_tag "golem.png", :class => "imagenCrypto", :alt => "golem"%>
+      <%= image_tag "hshare.png", :class => "imagenCrypto", :alt => "hshare"%>
+      <%= image_tag "iconomi.png", :class => "imagenCrypto", :alt => "iconomi"%>
+      <%= image_tag "komodo.png", :class => "imagenCrypto", :alt => "komodo"%>
+      <%= image_tag "lisk.png", :class => "imagenCrypto", :alt => "lisk"%>
+      <%= image_tag "litecoin.png", :class => "imagenCrypto", :alt => "litecoin"%>
+      <%= image_tag "maidsafecoin.png", :class => "imagenCrypto", :alt => "maidsafecoin"%>
+      <%= image_tag "miota.png", :class => "imagenCrypto", :alt => "miota"%>
+      <%= image_tag "monero.png", :class => "imagenCrypto", :alt => "monero"%>
+      <%= image_tag "nem.png", :class => "imagenCrypto", :alt => "nem"%>
+      <%= image_tag "neo.png", :class => "imagenCrypto", :alt => "neo"%>
+      <%= image_tag "pivx.png", :class => "imagenCrypto", :alt => "pivx"%>
+      <%= image_tag "qtum.png", :class => "imagenCrypto", :alt => "qtum"%>
+      <%= image_tag "ripple.png", :class => "imagenCrypto", :alt => "ripple"%>
+      <%= image_tag "siacoin.png", :class => "imagenCrypto", :alt => "siacoin"%>
+      <%= image_tag "steem.png", :class => "imagenCrypto", :alt => "steem"%>
+      <%= image_tag "stellar.png", :class => "imagenCrypto", :alt => "stellar"%>
+      <%= image_tag "stratis.png", :class => "imagenCrypto", :alt => "stratis"%>
+      <%= image_tag "tether.png", :class => "imagenCrypto", :alt => "tether"%>
+      <%= image_tag "vertcoin.png", :class => "imagenCrypto", :alt => "vertcoin"%>
+      <%= image_tag "waves.png", :class => "imagenCrypto", :alt => "waves"%>
+
+
+
+
+   </div>
    <%= label_tag "monto", "Monto" %>
    <br />
    <%= number_field_tag  "monto", "", :required => "required", min: 0.0000000001, step: :any %>
    <br />
-   <%= label_tag "moneda", "Moneda" %>
-   <br />
-   <%= text_field_tag "moneda", "", :required => "required"%>
+   <%= text_field "moneda", "", :required => "required", :id =>"campoMoneda"%>
    <br />
    <%= submit_tag "Apostar" %>
 <% end %>
@@ -18,7 +60,9 @@
    <% if @respuesta %>
       <p> Gracias por publicar tu apuesta </p>
 
-   <% else%>
-      <p>Tienes menos saldo de lo que quieres apostar!</p> 
-   <% end %>
+   <% elsif @seleccion_nula %>
+      <p>No seleccionaste ninguna moneda</p> 
+   <% else %>
+      <p>Tienes menos saldo de lo que quieres apostar!</p>
+   <%end%>  
 <%end%>

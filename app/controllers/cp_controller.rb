@@ -9,7 +9,6 @@ class CpController < ApplicationController
       			:monto => params[:monto].to_f,
          		:moneda => params[:moneda]
          		};
-  				
   				if current_user.saldo >= @info[:monto]	
 	  				@respuesta = true
 	  				current_user.update(:saldo => current_user.saldo - @info[:monto])
