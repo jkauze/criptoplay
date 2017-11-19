@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "cp/jugar"
   get 'cp/perfil'
   get 'cp/saldo'
+  post 'cp/saldo'
   get 'cp/resultados'
 
   # The priority is based upon order of creation: first created -> highest priority.
