@@ -42,6 +42,8 @@ class CpController < ApplicationController
 
 	#Pagina con los resultados del dia
 	def resultados
+		@arreglo_de_resultados = Result.all
+		@contador=0
 	end
 
 end
