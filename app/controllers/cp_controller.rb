@@ -11,7 +11,8 @@ class CpController < ApplicationController
          		};
   		
 		  		moneda = Coin.find_by(nombre: params[:moneda])
-		  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => :monto)
+		  		@bet = Bet.new(:user => current_user, :coin => moneda, :cantidad => @info[:monto])
+		  		@bet.save
 		end
 	end
 	#Pagina principal para recargar y ver saldo

@@ -1,3 +1,5 @@
 class Coin < ActiveRecord::Base
-	belongs_to :bet
+	has_many :bets
+	has_many :users, through: :bets
+
 end
