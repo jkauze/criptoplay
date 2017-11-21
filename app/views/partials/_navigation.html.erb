@@ -1,12 +1,101 @@
+<script type="text/javascript">
+      var flashvars = {};
+      flashvars.cssSource = "css/piecemaker.css";
+      flashvars.xmlSource = "piecemaker.xml";
+		
+      var params = {};
+      params.play = "true";
+      params.menu = "false";
+      params.scale = "showall";
+      params.wmode = "transparent";
+      params.allowfullscreen = "true";
+      params.allowscriptaccess = "always";
+      params.allownetworking = "all";
+	  
+      swfobject.embedSWF('piecemaker.swf', 'piecemaker', '960', '500', '10', null, flashvars,    
+      params, null);
+    
+    </script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
 <header>
+<div id="templatemo_wrapper">
+<div id="templatemo_header">
+    
+    	<div id="site_title"><h1><%= link_to "", root_path %></h1></div>
+        
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+              	<li><%= link_to "Inicio", root_path %></li>
+          		<li><%= link_to "Conocenos",  welcome_conocenos_path  %></li>
+          		<li><%= link_to "Resultado", cp_resultados_path %></li>
+              	<%if user_signed_in? %>
+
+              	<li><a href="">Saldo : <%=current_user.saldo%></a></li>
+                <li><%= link_to "Jugar",cp_jugar_path, :method => 'get' %>
+                	<ul>
+                		<li><%= link_to "Como jugar",cp_jugar_path, :method => 'get' %></li>
+                	</ul>
+                </li>
+                <li><a href="">Cuenta</a>
+                	<ul>
+                		<li><%= link_to "Recargar Saldo",  cp_saldo_path %></li>
+                        <li><%= link_to "Cerrar sesion",  destroy_user_session_path, method: :delete, class: "itemMenu" %> </li>
+                        
+
+                  	</ul>
+                </li>
+
+                <%else%>
+
+                
+
+              	<li><a href="">Entrar</a>
+                	<ul>
+                        <li><%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%></li>
+                        <li><%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %></li>
+
+                  	</ul>
+                </li>
+                <%end%>
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+        
+</div> <!-- end of header -->
+</div>
+</header>
+
+
+
+
+<!--
+<header id="templatemo_header">
 		<nav class="tableroMonedas white large-padding">
 			<ul class=" no-list row center-xs middle-xs" style="list-style-type:none">
 				<li class="col-md">
 					<%= @foo %>
 				</li>
 				<li class="col-md">
-					<h2 class="no-margin" id="logo"> <%= link_to "CriptoPlay", root_path %> </h2>
+					<div id="site_title">
+						<h1 class="no-margin" id="logo"> <%= link_to "CriptoPlay", root_path %> </h1>
+					</div>
 				 </li>
+
+				 <div id="templatemo_menu">
+				 	
+				 
 
 				<li class="col-md">
 					<%= link_to "Conocenos",  welcome_conocenos_path  %>
@@ -49,6 +138,8 @@
 			      <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
 			    </li>
 			<%end%>
+			</div>
 		</ul>
 	</nav>
 </header>
+-->
