@@ -1,11 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 .textoSlider{
 	background-color: rgba(0,0,0,0.5);
-	width: 100%;
+
 }
 
 .imagenesmonedas{
 	width: 450px;
-	margin-top: 80px;
+	margin-top: 35px;
 }
 
 .margen{
@@ -14,7 +19,10 @@
 
 .titulo{
 	text-align: center;
-	margin-top: 50px;
+}
+.titulo2{
+	text-align: center;
+	margin-top: 100px;
 }
 
 .tituloprincipal{
@@ -28,6 +36,33 @@
 
 }
 
+.miembro{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.miembro p{
+	margin-top: 5px;
+	font-size: 17px;
+
+}
 .tamanoMiembro{
 	width: 100px;
+
+}
+
+#equipo{
+	width: 300px;
+	display: block;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.textoEquipo{
+	width: 60%;
+	margin: auto;
+	margin-bottom: 40px;
+	text-align: center;
 }

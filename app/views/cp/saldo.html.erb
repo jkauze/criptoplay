@@ -1,15 +1,15 @@
 <div id="templatemo_wrapper">
 
 <div class="section-recargar">
-
+<div class="tarjeta">
  <form>
  	<h1>Recargar Saldo</h1>
   <input type="radio" name="tdc" value="Visa" checked> Visa
   <input type="radio" name="tdc" value="Mastercard" checked> Mastercard<br><br>
   Numero de cuenta: <br>
-  <input type="text" name="numerocuenta"><br>
+  <input type="text" name="numerocuenta" class="form-control"><br>
   Codigo de Seguridad:<br>
-  <input type="text" name="codigoseguridad"><br>
+  <input type="text" name="codigoseguridad" class="form-control"><br>
   Fecha de vencimiento<br>
   <span>
      <select name="mes">
@@ -83,29 +83,35 @@
 	</select>
 </span>
 <br> Cedula de identidad <br>
-<input type="text" name="Cedula de identidad"><br>
+<input type="text" name="Cedula de identidad" class="form-control"><br>
 </form> 
 <div id="coindesk-widget" ></div>
 	<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js"></script>
+
 </div>
 
+<div class="seccionRecargar">
 <h2> Monto a cambiar</h2>
    <br />
 
    <%= form_tag({:controller => "cp", :action => "saldo"}, :method => "post") do %>
    <%= label_tag "saldo", "monto en bsf " %>
 
-   <%= number_field_tag  "saldo_a_enviar", "", :required => "required", min: 0.0000000001, step: :any %>
+   <%= number_field_tag  "saldo_a_enviar", "", :required => "required", min: 0.0000000001, step: :any, :class => "form-control campoRecargar" %>
   
 
    
-   <%= submit_tag "Recargar" %>
+   <%= submit_tag "Recargar", :class => "btn tableroMonedas white"%>
 <% end %>
-	<p>Tu saldo actual es de: <%=current_user.saldo%> </p>
+  <p>Tu saldo actual es de: <%=current_user.saldo%> </p>
 <% if @saldo1 %>
    <p> <strong><%= @saldo1[:saldo] %></strong> fue lo que recargaste</p>
    
 <% end %>
+</div>
+</div>
+
+
 </div>
 
 

@@ -1,13 +1,42 @@
+<div class="socialBar">
+    <ul>
+      <li><a href=""  target="_blank"  class="icon-facebook"></a></li>
+      <li><a href="" target="_blank"  class="icon-twitter"></a></li>
+      <li><a href=""  target="_blank" class="icon-instagram"></a></li>
+    </ul>
+</div>
+
 <div id="templatemo_wrapper">
     <div id="templatemo_fw">
-        <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-            <!-- Carousel indicators -->
+        
+            <!-- Carousel items -->
+
+          <h2 class="titulo">Comienza a jugar ahora mismo!</h2>
+
+          <div class="mainSlides">
+            <div class="slides">
+              <div class="espacioImagen1">
+                <p>Apuesta diariamente a una de las 36 CriptoMonedas e intenta ganar</p>
+              </div>
+            
+              <div class="espacioImagen2">
+                <p>Sistema basado en las criptomonedas</p>
+              </div>
+
+              <div class="espacioImagen3">
+                <p>Parque Cristal</p>
+              </div>
+            </div>
+        </div>
+
+
+          <!--
+          <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
-            <!-- Carousel items -->
             <div class="carousel-inner">
               <div class="item active">
               	<%= image_tag "imagenportada.jpg", :alt => "First Slide"%>
@@ -39,12 +68,14 @@
               </div>
             </div>
         </div>
+
+        -->
 	</div>
     
     <div id="templatemo_main">
     	<div class="col_fw">
         	<div class="col_w460 float_l">
-            	<h2 class="titulo">Reglas del Juego</h2>
+            	<h2 class="titulo2">Reglas del Juego</h2>
                 <div class="cleaner h20"></div>
                 <ul class="tmo_list margen">
                   <li>CriptoPlay es un juego de ENVITE Y AZAR, que consiste en la extracción aleatoria de UNA (1) CRIPTOMONEDA que resultará ganadora en cada uno de los sorteos establecidos. Permitiendo escoger entre 36 criptomonedas y pagándose 29 veces el monto de la apuesta.</li>
@@ -59,7 +90,7 @@
                 <a href="#" class="more float_r"></a>
             </div>
             <div class="col_w460 float_r">
-            	<h2 class="titulo">Monedas</h2>
+            	<h2 class="titulo2">Monedas</h2>
             	<%= image_tag "monedasindex.png", :alt => "image 02" ,:class =>"imagenesmonedas" %>
 
             </div>
@@ -70,9 +101,32 @@
     <div class="cleaner"></div>
 
 </div> 
-<div id="templatemo_footer_wrapper">
-    <div id="templatemo_footer">
-        Copyright © 2017 <a href="#">KDMJ Team</a>
-        <div class="cleaner"></div>
-    </div>
+
+<script type="text/javascript" src="jquery.slides.js"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+      $(".slides").slidesjs({
+          play: {
+              active: true,
+              // [boolean] Generate the play and stop buttons.
+              // You cannot use your own buttons. Sorry.
+              effect: "slide",
+              // [string] Can be either "slide" or "fade".
+              interval: 3000,
+              // [number] Time spent on each slide in milliseconds.
+              auto: true,
+              // [boolean] Start playing the slideshow on load.
+              swap: true,
+              // [boolean] show/hide stop and play buttons
+              pauseOnHover: false,
+              // [boolean] pause a playing slideshow on hover
+              restartDelay: 2500
+              // [number] restart delay on inactive slideshow
+          }
+        });
+    });
+</script>
+
 

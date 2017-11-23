@@ -55,7 +55,24 @@ a,a:visited{
 }
 .section-recargar{
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	
+}
+
+.tarjeta{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.campoRecargar{
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.seccionRecargar{
+	margin-top: 80px;
+	//align-self: center;
 }
 
 .tableroMonedas{

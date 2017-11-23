@@ -1,0 +1,74 @@
+footer{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #333;
+
+}
+
+.redesSociales{
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-bottom: 2px solid black;
+
+}
+
+.redesSociales p{
+	color: white !important
+}
+
+
+.redesSociales a{
+	color:black;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	color: #E5E5E5 !important;
+}
+
+.redesSociales a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.redesSociales a i{
+	font-size: 25px;
+}
+
+footer .columna{
+	margin-top: 20px;
+	margin-left: 60px;
+	margin-bottom: 10px;
+}
+footer .columna h6{
+	font-size: 20px;
+	color: #E5E5E5 !important;
+}
+
+footer .columna ul{
+	list-style: none;
+	margin-top: 5px;
+}
+
+footer .columna ul li a{
+	text-decoration: none;
+	color: #E5E5E5 !important;
+
+}
+footer .columna ul li a:hover{
+	color: white;
+}
+
+.copyRight{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.copyRight p{
+	color: #E5E5E5 !important;
+}

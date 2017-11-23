@@ -1,10 +1,22 @@
 <div id="templatemo_wrapper">
 <h1>Pagina de resultados del dia</h1>
 
+<table class="rwd-table">
+  <tr>
+    <th>#</th>
+    <th>Hora</th>
+    <th>Moneda</th>
+
+  </tr>
+
 <% @arreglo_de_resultados.each_with_index  do |iterador,i|%>
 
-	<h4>Resultado: <%=i+1%> </h4>
-	<h4>Hora: <%=iterador.fecha%></h4>
-	<h4>Moneda: <%=iterador.coin.nombre%></h4>
+	<tr>
+    <td data-th="#"><%=i+1%></td>
+    <td data-th="Hora"><%=iterador.fecha%></td>
+    <td data-th="Moneda"><%=iterador.coin.nombre%></td>
+  </tr>
+
 <%end%>	
+</table>
 </div>

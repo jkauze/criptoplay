@@ -42,7 +42,7 @@ ddsmoothmenu.init({
           		<li><%= link_to "Resultado", cp_resultados_path %></li>
               	<%if user_signed_in? %>
 
-              	<li><a href="">Saldo : <%=current_user.saldo%></a></li>
+              	<li><%= link_to "Saldo:#{current_user.saldo}",  cp_saldo_path %></li>
                 <li><%= link_to "Jugar",cp_jugar_path, :method => 'get' %>
                 	<ul>
                 		<li><%= link_to "Como jugar",cp_jugar_path, :method => 'get' %></li>
