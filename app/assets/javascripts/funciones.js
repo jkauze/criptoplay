@@ -8,7 +8,9 @@ $(document).ready(function(){
 		if ( seleccion ){
 			moneda_actual.css({
 				"background": "none"
+
 			});
+			$("#textoNombreMoneda").remove();
 			var nombreMoneda = $(this).attr("alt");
 			if ( nombreMoneda == moneda_actual.attr("alt") ){
 				seleccion = false;
@@ -20,6 +22,7 @@ $(document).ready(function(){
 				$(this).css({
 				"background": "yellow" 
 				});
+				$("#formularioJugar div").append("<p id='textoNombreMoneda'> Moneda seleccionada: " + nombreMoneda + "</p>");
 			}
 		}
 		else{
@@ -28,8 +31,9 @@ $(document).ready(function(){
 			seleccion = true;
 			$("#campoMoneda").val(nombreMoneda);
 			$(this).css({
-			"background": "yellow" 
+			"background": "yellow"
 			});
+			$("#formularioJugar div").append("<p id='textoNombreMoneda'> Moneda seleccionada: " + nombreMoneda + "</p>");
 		}	
 	});
 })

@@ -6,6 +6,7 @@
     <th>#</th>
     <th>Hora</th>
     <th>Moneda</th>
+    <th>Imagen</th>
 
   </tr>
 
@@ -15,6 +16,7 @@
     <td data-th="#"><%=i+1%></td>
     <td data-th="Hora"><%=iterador.fecha%></td>
     <td data-th="Moneda"><%=iterador.coin.nombre%></td>
+    <td data-th="Imagen"><%=image_tag "#{iterador.coin.nombre}.png" , :class => "imagenCrypto2"%></td>
   </tr>
 
 <%end%>	

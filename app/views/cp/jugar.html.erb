@@ -48,11 +48,13 @@
 
 
    </div>
+   <div id="formularioJugar">
    <%= label_tag "monto", "Monto" %>
    <br />
    <%= number_field_tag  "monto", "", :required => "required", min: 0.0000000001, step: :any %>
    <br />
-   <%= hidden_field "moneda", "", :required => "required", :id =>"campoMoneda"%>
+   <%= @campo = hidden_field "moneda", "", :required => "required", :id =>"campoMoneda"%>
+
    <br />
    <%= submit_tag "Apostar" %>
 <% end %>
@@ -67,4 +69,8 @@
       <p>Tienes menos saldo de lo que quieres apostar!</p>
    <%end%>  
 <%end%>
+<div>
+   
+</div>
+</div>
 </div>
