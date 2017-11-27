@@ -78,68 +78,17 @@ ddsmoothmenu.init({
 </header>
 
 
+<% if can? :create, Coin %>
 
+<div>
+	<nav class="menuAdmin d-flex justify-content-around">
+		<h3 class="tituloPanelAdmin">Panel Administrador</h3>
+		<ul class="d-flex listaAdmin">
+			<li class="mr-3 elementoListaAdmin"><%=link_to "Crear Moneda", '/coins/new'%></li>
+			<li class="mr-3 elementoListaAdmin"><%=link_to "Eliminar", '/coins/delete'%></li>
+			<li class="mr-3 elementoListaAdmin">Eliminar Usuario</li>
 
-<!--
-<header id="templatemo_header">
-		<nav class="tableroMonedas white large-padding">
-			<ul class=" no-list row center-xs middle-xs" style="list-style-type:none">
-				<li class="col-md">
-					<%= @foo %>
-				</li>
-				<li class="col-md">
-					<div id="site_title">
-						<h1 class="no-margin" id="logo"> <%= link_to "CriptoPlay", root_path %> </h1>
-					</div>
-				 </li>
-
-				 <div id="templatemo_menu">
-				 	
-				 
-
-				<li class="col-md">
-					<%= link_to "Conocenos",  welcome_conocenos_path  %>
-				</li>
-
-				
-
-				<li class="col-md">
-			    <%= link_to "Resultado", cp_resultados_path %>
-			    </li>
-
-
-				</li> <%if user_signed_in? %>
-
-			    <li class="col-md"> 
-			    	<%= link_to "Jugar",cp_jugar_path, :method => 'get' %>
-			    </li>
-
-			    <li class="col-md">
-			    	Saldo : <%=current_user.saldo%> 
-			    </li>
-
-			    <li class="col-md">
-			    	<ul style="list-style-type:none">
-				        <li><a href="#nowhere" >Perfil</a>
-				            <ul id="list">
-				                <li><%= link_to "Terminar",  destroy_user_session_path, method: :delete, class: "itemMenu" %> </li>
-				                <li class="col-md"><%= link_to "Saldo",  cp_saldo_path %></li>
-				            </ul>
-				        </li>
-				    </ul>
-			    </li>
-
-			    <%else%>
-			    <li class="col-md">
-			      <%= link_to "Iniciar sesion", new_user_session_path, class: "itemMenu"%>
-			    </li>
-
-			    <li class="col-md">
-			      <%= link_to "Crear cuenta", new_user_registration_path,class: "itemMenu" %>
-			    </li>
-			<%end%>
-			</div>
 		</ul>
 	</nav>
-</header>
--->
+</div>
+<%end%>

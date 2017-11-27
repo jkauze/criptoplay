@@ -85,3 +85,66 @@
 	min-height: 70px;
 	max-height: 70px;
 }
+
+
+.menuAdmin{
+	background: #333;
+	color: white;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.menuAdmin ul{
+	margin: 0;	
+}
+
+.menuAdmin h3{
+	color: white;
+	margin: 0;
+}
+.listaAdmin{
+	list-style: none;
+}
+
+.listaAdmin a:visited{
+	color: white;
+}
+
+.listaAdmin a:hover{
+	text-decoration: none;
+}
+
+.formularioMoneda{
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.nombreMoneda{
+	width: 500px !important;
+
+}
+
+.espacioListaMonedas{
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.listaMonedas{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 30px;
+}
+
+.listaMonedas p{
+	font-size: 20px !important;
+	color: black;
+}

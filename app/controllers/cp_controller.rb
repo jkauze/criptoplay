@@ -1,6 +1,6 @@
 class CpController < ApplicationController
-
 	#Pagina principal para apostar
+	load_and_authorize_resource
 	def jugar
 		hora
 		@respuesta = nil;

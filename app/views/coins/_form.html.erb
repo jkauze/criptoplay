@@ -1,6 +1,13 @@
+
+<h3 class="text-center">Crea una nueva moneda y anadela a la BD</h3>
+
 <%=form_for(@nueva_moneda) do |f| %>
+<div class="formularioMoneda">
+<%= f.text_field :nombre, placeholder: "Ingresa el nombre de la moneda", class:"form-control nombreMoneda" %>
 
-<%= f.text_field :nombre, placeholder: "Ingresa el nombre de la moneda" %>
+<%= f.label :Imagen %>
+  <%= f.file_field :image %>
 
-<%= f.submit "Crear Moneda"%>
+<%= f.submit "Crear Moneda", class:"btn tableroMonedas white"%>
 <%end%>
+</div>

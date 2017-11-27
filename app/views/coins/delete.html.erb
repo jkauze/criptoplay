@@ -1,0 +1,20 @@
+<table class="rwd-table">
+  <tr>
+    <th>Moneda</th>
+    <th>Imagen</th>
+    <th>Opcion</th>
+
+  </tr>
+
+<%=@arreglo_de_monedas.each do |iterador|%> 
+
+	<tr>
+    <td data-th="Moneda"><%=iterador.nombre%></td>
+    <td data-th="Imagen"><%=image_tag "#{iterador.nombre}.png" , :class => "imagenCrypto2"%>
+    <td data-th="Opcion">Borrar</td>
+</td>
+  </tr>
+
+<%end%>	
+</table>
+	

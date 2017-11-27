@@ -22,8 +22,8 @@ body {
 a, a:link, a:visited { color: #000; font-weight: normal; text-decoration: none }
 a:hover { color: #096; text-decoration: underline; }
 
-a.more { display: block; width: 79px; height: 26px; line-height: 26px; color: #000; text-align: center; background: url(images/templatemo_more.png) no-repeat; font-weight: 700; text-decoration: none }
-a.more:hover { background:url(images/templatemo_more_hover.png) }
+a.more { display: block; width: 79px; height: 26px; line-height: 26px; color: #000; text-align: center; background: url(templatemo_more.png) no-repeat; font-weight: 700; text-decoration: none }
+a.more:hover { background:url(templatemo_more_hover.png) }
 
 
 p { margin: 0 0 10px 0; padding: 0; }

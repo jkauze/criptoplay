@@ -1,15 +1,18 @@
 class CoinsController < ApplicationController
 	before_action :set_coin, except:[:new,:create,:index]
+	
 	def index
 
 		#Va a ser el index de mi paginas de articulos
 		#Article.all devuelve un objeto con el que puedo iterar y obtener cada uno
 		#de mis articulos
 		@arreglo_de_monedas = Coin.all
+		authorize! :read, @arreglo_de_monedas
 
 	end
 
 	def show 
+
 		#Va a ser la pagina de cada uno de mis articulos
 		#puedo obtener mi articulo con Article.find para agregarle estilos
 		#@mi_articulo = Article.find(params[:id])
@@ -20,7 +23,9 @@ class CoinsController < ApplicationController
 		#aqui instancio mi articulo nuevo vacio
 		#para luego en la vista anadirle propiedades
 		@nueva_moneda = Coin.new
+		authorize! :create, @nueva_moneda
 	end
+
 
 	def create
 
@@ -28,6 +33,7 @@ class CoinsController < ApplicationController
 		#con los datos que mande de post de nuevo_articulo
 
 		@nueva_moneda = Coin.new(coin_params)
+		authorize! :create, @nueva_moneda
 
 		#Aqui guardo finalmente mi articulo en mi tabla de la base de datos
 
@@ -41,6 +47,10 @@ class CoinsController < ApplicationController
 
 		#hago un redireccionamiento a mi la pagina de mi articulo
 		
+	end
+
+	def delete
+		@arreglo_de_monedas = Coin.all
 	end
 
 	def destroy

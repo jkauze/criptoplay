@@ -45,5 +45,8 @@ group :development do
   gem 'spring'
 
   gem 'devise'
+
+  gem 'cancancan'
+  gem 'load_and_authorize_resource'
 end
 
